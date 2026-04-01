@@ -5,6 +5,8 @@ const mongoose = require('mongoose')
 const questions = require('./data/questions')
 const app = express()
 const Score = require('./models/Score')
+const User = require('./models/User')
+
 
 
 // Middleware
