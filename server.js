@@ -13,7 +13,14 @@ const verifyToken = require('./middleware/verifyToken')
 
 
 // Middleware
-app.use(cors())
+const allowedOrigins = [
+    'http://localhost:5173',
+    'https://ahouse74.github.io'
+]
+
+app.use(cors({
+    origin: allowedOrigins
+}))
 app.use(express.json())
 
 // Test route
